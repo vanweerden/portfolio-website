@@ -45,7 +45,7 @@ nav {
 
 .nav-link {
   margin: 20px;
-  font-size: 0.9em;
+  font-size: 2em;
 }
 
 
@@ -66,7 +66,7 @@ a {
 }
 
 a:hover {
-  color: var(--highlight);
+  color: var(--complementary);
   transition: 250ms;
 }
 
@@ -132,6 +132,11 @@ h2 {
 }
 
 /* ------------Projects section------------ */
+#projects {
+  background-color: var(--input);
+  color: var(--white);
+}
+
 #project-grid {
   display: flex;
   justify-content: center;
