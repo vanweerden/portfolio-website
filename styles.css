@@ -35,7 +35,7 @@ main {
 }
 
 section {
-  padding: 3em 1em 5em 1em;
+  padding: 0 1em 5em 1em;
   width: 100%;
 }
 
@@ -45,8 +45,8 @@ h2 {
 
 h1, h2 {
   color: white;
-  margin-top: 100px;
   margin-bottom: 1em;
+  margin-top: 3.5em;
 }
 
 p {
@@ -78,10 +78,9 @@ a:active {
 }
 
 
-
 /* ------------Nav bar------------ */
 header {
-  height: 100px;
+  height: 70px;
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -125,6 +124,7 @@ nav {
   align-items: flex-start;
   background-color: var(--background-dark);
   margin-left: 1em;
+  margin-right: 1em;
 }
 
 #greeting {
@@ -181,7 +181,13 @@ nav {
 #about-container {
   margin: 0 auto;
   max-width: 45em;
-  margin-bottom: 3em;
+}
+
+#profile-pic {
+  display: none;
+  width: 33%;
+  min-width: 150px;
+  max-width: 200px;
 }
 
 /* ------------Projects section------------ */
@@ -299,9 +305,20 @@ textarea {
 
 @media screen and (min-width: 600px) {
   #greeting {
-    font-size: 3em;
+    font-size: 2em;
   }
   #welcome .button {
     align-self: flex-start;
+  }
+  .nav-link {
+    font-size: 1.3em;
+  }
+  #about-container {
+    flex: none;
+  }
+  #profile-pic {
+    display: block;
+    float: left;
+    margin: 1em;
   }
 }
