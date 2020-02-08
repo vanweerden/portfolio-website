@@ -77,6 +77,52 @@ a:active {
   font-weight: normal;
 }
 
+/* ------------Drop menu------------ */
+/* Dropdown Button */
+#dropbtn {
+  background-color: black;
+  color: var(--text-dark);;
+  padding: 16px;
+  font-size: 1em;
+  border: none;
+}
+
+#dropbtn:hover {
+  cursor: pointer;
+  color: var(--primary-color-light);
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+#dropdown {
+  position: fixed;
+  right: 2em;
+  top: 1em;
+
+}
+
+/* Dropdown Content (Hidden by Default) */
+#dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: black;
+  color: white;
+  /* min-width: 160px; */
+  z-index: 9999;
+}
+
+/* Links inside the dropdown */
+#dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  /* width: 100vw; */
+}
+
+/* Change color of dropdown links on hover */
+#dropdown-content a:hover {
+  color: var(--primary-color-light);
+}
 
 /* ------------Nav bar------------ */
 header {
@@ -93,7 +139,7 @@ header {
 
 nav {
   /* width: 70vw; */
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
 }
@@ -302,23 +348,35 @@ textarea {
 }
 
 /* ------------ Break points ------------*/
-
 @media screen and (min-width: 600px) {
+  nav {
+    display: flex;
+  }
+
+  #dropdown {
+    display: none;
+  }
+
   #greeting {
     font-size: 2em;
   }
+
   #welcome .button {
     align-self: flex-start;
   }
+
   .nav-link {
     font-size: 1.3em;
   }
+
   #about-container {
     flex: none;
   }
+
   #profile-pic {
     display: block;
     float: left;
     margin: 1em;
   }
+
 }
