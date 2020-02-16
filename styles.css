@@ -85,6 +85,7 @@ a:active {
   color: var(--text-dark);
   padding: 16px;
   font-size: 1em;
+  font-weight: bold;
   border: none;
   margin: 0.5em;
   border: 1px solid gray;
@@ -110,7 +111,7 @@ a:active {
 #dropdown-content {
   display: none;
   position: fixed;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
   z-index: 9999;
   text-align: center;
@@ -121,7 +122,8 @@ a:active {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  border-top: 1px solid var(--text-dark);;
+  border-top: 1px solid var(--text-dark);
+  font-weight: bold;
 }
 
 /* Change color of dropdown links on hover */
@@ -266,7 +268,13 @@ links to code and demo on bottom*/
   border: 1px solid white;
 }
 
-.project-cover .project-title {
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-cover .project-info {
   background-color: rgba(77, 166, 255, 0.2);
   visibility: hidden;
   height: 250px;
@@ -275,7 +283,7 @@ links to code and demo on bottom*/
   padding: 10px;
 }
 
-.project-cover:hover .project-title {
+.project-cover:hover .project-info {
   visibility: visible;
 }
 
@@ -286,6 +294,14 @@ links to code and demo on bottom*/
 .project-description {
   font-size: 0.7em;
   padding: 1em;
+}
+
+.project-links {
+  margin-top: 1em;
+}
+
+.project-description a {
+  color: var(--primary-color-light);
 }
 
 /* ------------Contact form------------ */
