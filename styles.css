@@ -61,6 +61,14 @@ p {
   color: var(--secondary-color);
 }
 
+.primary-light {
+  color: var(--primary-color-light);
+}
+
+.secondary-light {
+  color: var(--secondary-color-light);
+}
+
 a {
   text-decoration: none;
   color: var(--text-dark);
@@ -268,6 +276,12 @@ links to code and demo on bottom*/
   border: 1px solid white;
 }
 
+/* Drum Kit */
+.project-3 {
+  background-image: url("images/drum-kit.jpg");
+  background-size: contain;
+}
+
 .project-info {
   display: flex;
   flex-direction: column;
@@ -275,7 +289,8 @@ links to code and demo on bottom*/
 }
 
 .project-cover .project-info {
-  background-color: rgba(77, 166, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
   visibility: hidden;
   height: 250px;
   width: 250px;
@@ -301,7 +316,7 @@ links to code and demo on bottom*/
 }
 
 .project-description a {
-  color: var(--primary-color-light);
+  color: var(--primary-color-dark);
 }
 
 /* ------------Contact form------------ */
