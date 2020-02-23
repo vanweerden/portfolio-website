@@ -50,6 +50,17 @@ h1, h2 {
   margin-top: 3.5em;
 }
 
+/* Add partial border to bottom of h2 */
+h2:after {
+  content: ""; /* Necessary to create pseudo element */
+  display: block; /* Puts on its own line */
+  margin: 0 auto;
+  max-width: 200px;
+  width: 25%;
+  padding-top: 10px;
+  border-bottom: 1px solid white;
+}
+
 p {
   margin: 1.5em 0;
 }
@@ -270,9 +281,8 @@ nav {
   margin: 0 auto;
 }
 
-/*Pic of project
-On hover: title and transparent color appear on top
-links to code and demo on bottom*/
+/* Pic of project
+On hover: title and transparent color appear on top with links to code and demo on bottom */
 .project-tile {
   margin: 5px;
   border: 1px solid white;
@@ -291,7 +301,7 @@ links to code and demo on bottom*/
 }
 
 .project-cover .project-info {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.85);
   color: black;
   visibility: hidden;
   height: 300px;
