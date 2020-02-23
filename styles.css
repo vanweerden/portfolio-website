@@ -432,4 +432,15 @@ textarea {
   .project-description {
     font-size: 1em;
   }
+
+  #contact-form {
+    margin: 0 auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  textarea {
+    height: 23em;
+  }
 }
