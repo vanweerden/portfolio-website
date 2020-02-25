@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Raleway&display=swap);
 
 :root {
   --text-light: #E6E6E6;
   --text-dark: #999;
 
   --primary-color: #4da6ff;
-  --primary-color-dark: #0066cc;
+  --primary-color-dark: #06c;
   --primary-color-light: #b3d9ff;
 
   --secondary-color: #ff914d;
@@ -16,23 +16,23 @@
   --background-light: #555;
 }
 
+/* Base Styling */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
   color: var(--text-dark);
+  font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
   line-height: 1.5;
-  font-size: 16px;
 }
 
 main {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 section {
@@ -44,21 +44,21 @@ h2 {
   text-align: center;
 }
 
-h1, h2 {
+h1,
+h2 {
   color: white;
-  margin-bottom: 1em;
-  margin-top: 3.5em;
+  margin: 3.5em 0 1em 0;
 }
 
 /* Add partial border to bottom of h2 */
 h2:after {
+  border-bottom: 1px solid white;
   content: ""; /* Necessary to create pseudo element */
-  display: block; /* Puts on its own line */
+  display: block; /* Puts border on its own line */
   margin: 0 auto;
   max-width: 200px;
+  padding: 10px 0 0 0;
   width: 25%;
-  padding-top: 10px;
-  border-bottom: 1px solid white;
 }
 
 p {
@@ -82,14 +82,14 @@ p {
 }
 
 a {
-  text-decoration: none;
   color: var(--text-dark);
+  text-decoration: none;
 }
 
 a:hover {
   color: var(--primary-color-light);
-  transition: 250ms;
   font-weight: bold;
+  transition: 250ms;
 }
 
 a:active {
@@ -97,54 +97,77 @@ a:active {
   font-weight: normal;
 }
 
+/* Button styles */
+.button {
+  background-color: var(--background-dark);
+  border: 2px solid white;
+  border-radius: 0;
+  color: white;
+  height: 50px;
+  width: 150px;
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.button:active {
+  background-color: var(--primary-color-light);
+  border: 2px solid var(--primary-color-light);
+}
+
+.button:focus {
+  outline: var(--primary-color-dark);
+}
+
 
 /* ------------Drop menu------------ */
 /* Dropdown Button */
-#dropbtn {
+#drop-btn {
   background-color: black;
-  color: var(--text-dark);
-  padding: 16px;
-  font-size: 1em;
-  font-weight: bold;
-  border: none;
-  margin: 0.5em;
   border: 1px solid gray;
+  color: var(--text-dark);
+  font-weight: bold;
+  margin: .5em;
+  padding: 16px;
 }
 
-#dropbtn:hover {
-  cursor: pointer;
-  color: var(--primary-color-light);
+#drop-btn:hover {
   border: 1px solid var(--primary-color-light);
+  color: var(--primary-color-light);
+  cursor: pointer;
 }
 
-#dropbtn:focus {
+#drop-btn:focus {
   outline-color: white;
 }
 
-/* The container <div> - needed to position the dropdown content */
+/* The container <div> -- needed to position the dropdown content */
 #dropdown {
-  width: 100vw;
   text-align: right;
+  width: 100vw;
 }
 
 /* Dropdown Content (Hidden by Default) */
 #dropdown-content {
+  background-color: rgba(0, 0, 0, .8);
   display: none;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
   width: 100%;
   z-index: 9999;
-  text-align: center;
 }
 
 /* Links inside the dropdown */
 #dropdown-content a {
+  border-top: 1px solid var(--text-dark);
+  color: var(--text-light);
+  display: block;
+  font-weight: bold;
   padding: 12px 16px;
   text-decoration: none;
-  display: block;
-  border-top: 1px solid var(--text-dark);
-  font-weight: bold;
-  color: var(--text-light);
 }
 
 /* Change color of dropdown links on hover */
@@ -154,102 +177,76 @@ a:active {
 
 /* ------------Nav bar------------ */
 header {
+  background-color: black;
+  display: flex;
   height: 70px;
-  width: 100%;
-  z-index: 2;
+  justify-content: center;
+  overflow: hidden;
   position: fixed;
   top: 0;
-  background-color: black;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  z-index: 2;
 }
 
 nav {
-  /* width: 70vw; */
+  align-items: center;
   display: none;
   flex-direction: row;
-  align-items: center;
 }
 
 .nav-link {
-  font-size: 1em;
   margin: 0 1em;
 }
 
 /* ------------Landing section------------ */
 #welcome {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: var(--background-dark);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
 }
 
 #welcome-container {
-  position: relative;
-  z-index: 1;
-  width: 90vw;
-  max-width: 900px;
+  align-items: flex-start;
+  background-color: var(--background-dark);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  background-color: var(--background-dark);
-  margin-left: 1em;
-  margin-right: 1em;
+  margin: 0 1em 0 1em;
+  max-width: 900px;
+  position: relative;
+  width: 90vw;
+  z-index: 1;
 }
 
+/* Focal point: "Hello..." */
 #greeting {
-  font-size: 1.5em;
+  color: white;
+  font-size: 1.8em;
   font-weight: bold;
   margin: 1em 0;
-  color: white;
 }
 
+/* Text under greeting */
 #blurb {
-  text-align: left;
-  line-height: 2;
   align-self: flex-start;
-}
-
-.button {
-  width: 150px;
-  height: 50px;
-  border-radius: 0;
-  background-color: var(--background-dark);
-  border: 2px solid white;
-  color: white;
-}
-
-.button:hover {
-  background-color: var(--primary-color);
-  transition: 500ms;
-  cursor: pointer;
-}
-
-.button:active {
-  background-color: var(--primary-color-light);
-  border: 2px solid var(--primary-color-light);
-
-}
-
-.button:focus {
-  outline: var(--primary-color-dark);
+  line-height: 2;
+  text-align: left;
 }
 
 #welcome .button {
-  margin-top: 4em;
   align-self: center;
+  margin: 4em 0 0 0;
 }
 
 
 /* ------------About section------------ */
 #about {
-  height: auto;
-  color: var(--text-light);
   background-color: var(--background-light);
+  color: var(--text-light);
+  height: auto;
 }
 
 #about-container {
@@ -259,9 +256,9 @@ nav {
 
 #profile-pic {
   display: none;
-  width: 33%;
-  min-width: 150px;
   max-width: 200px;
+  min-width: 150px;
+  width: 33%;
 }
 
 /* ------------Projects section------------ */
@@ -270,27 +267,26 @@ nav {
   color: var(--white);
 }
 
+/* Container div for project tiles */
 #project-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
   align-items: center;
-  width: 100%;
-  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
 }
 
-/* Pic of project
-On hover: title and transparent color appear on top with links to code and demo on bottom */
 .project-tile {
-  margin: 5px;
   border: 1px solid white;
+  margin: 5px;
 }
 
 /* Drum Kit */
 .project-3 {
-  background-image: url("images/drum-kit.jpg");
+  background-image: url(images/drum-kit.jpg);
   background-size: contain;
 }
 
@@ -300,14 +296,15 @@ On hover: title and transparent color appear on top with links to code and demo 
   justify-content: center;
 }
 
+/* On hover: title and transparent color appear on top */
 .project-cover .project-info {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, .85);
   color: black;
-  visibility: hidden;
   height: 300px;
-  width: 300px;
-  text-align: center;
   padding: 10px;
+  text-align: center;
+  visibility: hidden;
+  width: 300px;
 }
 
 .project-cover:hover .project-info {
@@ -319,12 +316,12 @@ On hover: title and transparent color appear on top with links to code and demo 
 }
 
 .project-description {
-  font-size: 0.8em;
+  font-size: .8em;
   padding: 1em;
 }
 
 .project-links {
-  margin-top: 1em;
+  margin: 1em 0 0 0;
 }
 
 .project-description a {
@@ -333,25 +330,25 @@ On hover: title and transparent color appear on top with links to code and demo 
 
 /* ------------Contact form------------ */
 #contact {
-  background-color: #555;
+  background-color: var(--background-light);
   color: white;
 }
 
 #contact-form {
-  margin: 0 auto;
-  max-width: 500px;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  max-width: 500px;
 }
 
 .text-box {
   background-color: var(--background-dark);
-  color: var(--light-grey);
   border: none;
+  color: var(--light-grey);
   display: block;
-  padding: 10px 15px;
-  margin: 0px 0px 3px;
   font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
+  padding: 10px 15px;
+  margin: 0 0 3px 0;
 }
 
 .text-box:focus {
@@ -368,14 +365,14 @@ textarea {
 
 /* ------------ Footer section ------------*/
 #footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   align-items: center;
   background-color: var(--background-dark);
-  font-size: 0.8em;
+  color: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  font-size: .8em;
   height: 200px;
-  color: var(--light-grey)
+  justify-content: space-around;
 }
 
 #social-grid {
@@ -434,7 +431,7 @@ textarea {
 }
 
 @media screen and (min-width: 900px) {
-  /* Make project tiles bigger */
+  /* Makes project tiles bigger */
   .project-cover .project-info {
     height: 375px;
     width: 375px;
@@ -445,10 +442,10 @@ textarea {
   }
 
   #contact-form {
-    margin: 0 auto;
-    max-width: 600px;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    max-width: 600px;
   }
 
   textarea {
