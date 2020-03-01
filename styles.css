@@ -188,7 +188,8 @@ header {
   z-index: 2;
 }
 
-nav {
+/* Nav bar for larger screens */
+#main-nav {
   align-items: center;
   display: none;
   flex-direction: row;
@@ -394,7 +395,7 @@ textarea {
 
 /* ------------ Break points ------------*/
 @media screen and (min-width: 600px) {
-  nav {
+  #main-nav {
     display: flex;
   }
 

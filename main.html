@@ -3,25 +3,21 @@
   <head>
     <title>andrewcodes.com</title>
     <link rel="stylesheet" href="styles.css"/>
-    <meta charset="UTF-8"/>
-    <meta name="author" content="Andrew van Weerden" />
-    <meta name="description" content="The portfolio webpage of Andrew van Weerden. Pop in to have a look at things he has built using JavaScript, React.js, CSS and HTML." />
-    <meta property="og:title" content="andrewcodes.com" />
-    <meta property="og:url" content="" />
-    <meta property="og:description" content="The portfolio webpage of Andrew van Weerden. Pop in to have a look at things he has built using JavaScript, React.js, CSS and HTML." />
-    <meta property="og:image" content="" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Andrew van Weerden">
+    <meta name="description" content="The portfolio webpage of Andrew van Weerden. Pop in to have a look at things he has built using JavaScript, React.js, CSS and HTML.">
   </head>
   <body>
     <!--Nav bar-->
     <header>
-      <nav>
+      <nav id="main-nav">
         <a href="#about"><div class="nav-link">About</div></a>
         <a href="#projects"><div class="nav-link">Portfolio</div></a>
         <a href="#contact"><div class="nav-link">Contact</div></a>
       </nav>
 
       <!--Drop down menu-->
-      <div id="dropdown">
+      <nav id="dropdown">
         <button id="drop-btn"
                 onclick="toggleDropMenu()"
                 >></button>
@@ -30,7 +26,7 @@
           <a href="#projects"><div class="nav-link">Portfolio</div></a>
           <a href="#contact"><div class="nav-link">Contact</div></a>
         </div>
-      </div>
+      </nav>
     </header>
 
     <main>
@@ -49,7 +45,7 @@
       <section id="about">
         <h2>About</h2>
         <div id="about-container">
-          <img id="profile-pic" alt="Profile picture of yours truly" src="images/profile_400x400.png" />
+          <img id="profile-pic" alt="Profile picture of Andrew" src="images/profile_400x400.png">
           <p>I am a web developer based in Perth, Western Australia who builds things with <span class="primary-light">HTML</span>, <span class="primary-light">CSS</span>, <span class="primary-light">JavaScript</span>, and <span class="primary-light">React</span>.</p>
           <p>I am interested in both front- and back-end technologies, and am constantly trying to hone and add to my skill set. I spend a lot of time delving into JavaScript.</p>
           <p>I am currently looking for an opportunity to gain experience working with a team in a professional environment.</p>
@@ -67,7 +63,7 @@
                 <h3 class="project-name">Language Blog</h3>
                 <div class="project-description">A blog to log my language learning. Among other things, I learned how to maintain consistent CSS styling across multiple pages. More info in the GitHub <a target="_blank" href="https://github.com/vanweerden/language-blog/blob/master/README.md">README file</a>.
                 <div class="project-links">
-                  <a href=''>The Deployment</a> | <a href="https://github.com/vanweerden/language-blog" target="_blank">The Code</a>
+                  <a href="">The Deployment</a> | <a href="https://github.com/vanweerden/language-blog" target="_blank">The Code</a>
                 </div>
               </div>
               </div>
@@ -81,7 +77,7 @@
                 <h3 class="project-name">Project Title</h3>
                 <div class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <a target="_blank" href="">commodo consequat</a>.
                 <div class="project-links">
-                  <a href=''>The Deployment</a> | <a href="" target="_blank">The Code</a>
+                  <a href="">The Deployment</a> | <a href="" target="_blank">The Code</a>
                 </div>
               </div>
               </div>
@@ -109,7 +105,7 @@
                 <h3 class="project-name">Project Title</h3>
                 <div class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <a target="_blank" href="">commodo consequat</a>.
                 <div class="project-links">
-                  <a href=''>The Deployment</a> | <a href="" target="_blank">The Code</a>
+                  <a href="">The Deployment</a> | <a href="" target="_blank">The Code</a>
                 </div>
               </div>
               </div>
