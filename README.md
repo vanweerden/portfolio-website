@@ -1,6 +1,6 @@
 # Portfolio Website
 
-The title says it all. This is a single-page website where I can showcase my web development projects. However, it is more than that: this webpage is itself one of my main projects. My goal is to make it the best representation of myself as a developer, both in style and functionality. It has been built from the ground up with HTML, CSS, and vanilla JavaScript.
+This is a single-page website where I can showcase my web development projects. However, it is more than that: this webpage is itself one of my main projects. My goal is to make it the best representation of myself as a developer, both in style and functionality. It has been built from the ground up with HTML, CSS, and vanilla JavaScript.
 
 ## Features
 ### HTML & CSS
