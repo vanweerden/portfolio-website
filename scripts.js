@@ -3,7 +3,7 @@ function toggleDropMenu() {
   const dropContent = document.getElementById("dropdown-content");
   // "block" or "none"
   const dropState = dropContent.style.display;
-  const dropButton = document.getElementById("dropbtn");
+  const dropButton = document.getElementById("drop-btn");
 
   // toggles display
   dropContent.style.display = dropState == "block" ? "none" : "block";
