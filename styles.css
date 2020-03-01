@@ -276,7 +276,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 75vw;
   width: 100%;
 }
 
@@ -440,14 +440,14 @@ textarea {
 
 @media screen and (min-width: 900px) {
   /* Makes project tiles bigger */
-  .project-cover .project-info {
+  /* .project-cover .project-info {
     height: 375px;
     width: 375px;
-  }
+  } */
 
-  .project-description {
+  /* .project-description {
     font-size: 1em;
-  }
+  } */
 
   #contact-form {
     display: flex;
