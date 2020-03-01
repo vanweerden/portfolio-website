@@ -285,6 +285,12 @@ header {
   margin: 5px;
 }
 
+/* Portolfio Website */
+.project-1 {
+  background-image: url(images/portfolio.jpg);
+  background-size: contain;
+}
+
 /* Drum Kit */
 .project-3 {
   background-image: url(images/drum-kit.jpg);
@@ -421,6 +427,7 @@ textarea {
 
   /* Photo appears */
   #profile-pic {
+    border-radius: 50%;
     display: block;
     float: left;
     margin: 1em;
