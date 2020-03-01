@@ -4,7 +4,7 @@ The title says it all. This is a single-page website where I can showcase my web
 
 ## Features
 ### HTML & CSS
-- Clear, concise, well-documented code
+- Clear, concise, and well-documented code
 - Use of media queries for responsive design
 - Semantic and accessible HTML
 - Maintainable CSS: use of variables for colors to allow for easy color scheme tweaks
