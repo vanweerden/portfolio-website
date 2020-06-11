@@ -4,10 +4,12 @@
   --text-light: #E6E6E6;
   --text-dark: #999;
 
+  /* Light Blue */
   --primary-color: #4da6ff;
   --primary-color-dark: #06c;
   --primary-color-light: #b3d9ff;
 
+  /* Orange */
   --secondary-color: #ff914d;
   --secondary-color-light: #ffc099;
   --secondary-color-dark: #e65800;
