@@ -291,6 +291,12 @@ header {
   background-size: contain;
 }
 
+/* Slacker News */
+.project-2 {
+  background-image: url(images/slacker-news.jpg);
+  background-size: contain;
+}
+
 /* Drum Kit */
 .project-3 {
   background-image: url(images/drum-kit.jpg);
