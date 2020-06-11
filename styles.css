@@ -285,28 +285,31 @@ header {
   margin: 5px;
 }
 
-/* Portolfio Website */
+/* Slacker News */
 .project-1 {
-  background-image: url(images/portfolio.jpg);
-  background-size: contain;
+  background-image: url(images/slacker-news.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-/* Slacker News */
+/* Portfolio Website */
 .project-2 {
-  background-image: url(images/slacker-news.jpg);
-  background-size: contain;
+  background-image: url(images/portfolio.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Drum Kit */
 .project-3 {
   background-image: url(images/drum-kit.jpg);
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .project-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: cover;
 }
 
 /* On hover: title and transparent color appear on top */
