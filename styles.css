@@ -369,12 +369,22 @@ header {
   margin: 0 0 3px 0;
 }
 
+.text-box:required {
+  box-shadow: none;
+  border: none;
+}
+
+.text-box:invalid {
+  outline: none;
+}
+
 .text-box:focus {
-  border: 1px solid var(--secondary-color);
+  outline: 1px solid var(--secondary-color);
 }
 
 textarea {
   height: 15em;
+  font-size: 0.9em;
 }
 
 #contact .button {

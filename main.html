@@ -114,10 +114,10 @@
       <section id="contact">
         <h2>Contact</h2>
         <form action="email-form.php" method="post" id="contact-form">
-          <input class="text-box" type="text" name="name" placeholder="Name (required)" required>
-          <input class="text-box" type="email" name="email" placeholder="Enter email (required)" required>
-          <input class="text-box" type="subject" name="subject" placeholder="Subject" required>
-          <textarea class="text-box" placeholder="Your message" type="text" name="message" required></textarea>
+          <input class="text-box" type="text" name="name" placeholder="Name (required)" maxlength="50" required>
+          <input class="text-box" type="email" name="email" placeholder="Enter email (required)" maxlength="50" required>
+          <input class="text-box" type="text" name="subject" placeholder="Subject (required)" maxlength="50" required>
+          <textarea class="text-box" placeholder="Your message (required)" type="text" name="message" required></textarea>
           <input class="button" type="submit" name="contact" value="SUBMIT">
         </form>
       </section>
