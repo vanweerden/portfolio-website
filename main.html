@@ -111,14 +111,15 @@
           </div>
       </section>
 
+      <!--TODO: add action-->
       <section id="contact">
         <h2>Contact</h2>
-        <form id="contact-form" onsubmit="handleSubmit()">
+        <form id="contact-form" action="" method="post">
           <input class="text-box" type="text" name="name" placeholder="Name (required)" maxlength="50">
-          <input class="text-box" type="text" name="email" placeholder="Enter email (required)" maxlength="50">
+          <input class="text-box" type="email" name="email" placeholder="Enter email (required)" maxlength="50">
           <input class="text-box" type="text" name="subject" placeholder="Subject (required)" maxlength="50">
           <textarea class="text-box" placeholder="Your message (required)" type="text" name="message"></textarea>
-          <input class="button" type="submit" name="contact" value="SEND">
+          <button class="button" type="submit">Send</button>
         </form>
       </section>
     </main>
