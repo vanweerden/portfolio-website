@@ -403,6 +403,8 @@ textarea {
   margin-right: 0;
 }
 
+/* Form validation */
+
 .text-box:required {
   box-shadow: none;
   border: none;

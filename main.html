@@ -119,19 +119,39 @@
           <ul>
             <li>
               <label for="form-name">Name</label>
-              <input class="text-box" type="text" name="name" id="form-name" maxlength="50">
+              <input type="text"
+                class="text-box"
+                id="form-name"
+                name="name"
+                placeholder="(Required)"
+                maxlength="50"
+                required  />
             </li>
             <li>
               <label for="form-email">E-mail</label>
-              <input class="text-box" type="email" name="email" id="form-email" maxlength="50">
+              <input type="email"
+                class="text-box"
+                id="form-email"
+                name="email"
+                placeholder="(Required)"
+                required  />
             </li>
             <li>
               <label for="form-subject">Subject</label>
-              <input class="text-box" type="text" name="subject" id="form-subject" maxlength="50">
+              <input type="text"
+                class="text-box"
+                id="form-subject"
+                name="subject"
+                maxlength="50"  />
             </li>
             <li>
               <label for="form-message">Message</label>
-              <textarea class="text-box" type="text" name="message" id="form-message"></textarea>
+              <textarea class="text-box"
+                id="form-message"
+                name="message"
+                placeholder="(Required)"
+                maxlength="240"
+                required  ></textarea>
             </li>
             <li>
               <button class="button" type="submit">Send</button>
