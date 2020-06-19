@@ -347,12 +347,6 @@ header {
 }
 
 /* ------------Contact form------------ */
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 #contact {
   background-color: var(--background-light);
   color: white;
@@ -363,15 +357,45 @@ ul {
   max-width: 500px;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+label {
+  display: inline-block;
+  text-align: right;
+  width: 85px;
+  margin: 0.3em 0.5em 0 0;
+}
+
 .text-box {
   background-color: var(--background-dark);
   border: none;
   color: var(--light-grey);
-  display: block;
   font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
   padding: 10px 15px;
-  margin: 0 0 3px 0;
+  margin: 0 0 0.5em 0;
   width: 100%;
+}
+
+textarea {
+  height: 15em;
+  font-size: 0.9em;
+  vertical-align: top;
+}
+
+#contact .button {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .text-box:required {
@@ -385,15 +409,6 @@ ul {
 
 .text-box:focus {
   outline: 1px solid var(--secondary-color);
-}
-
-textarea {
-  height: 15em;
-  font-size: 0.9em;
-}
-
-#contact .button {
-  align-self: flex-end;
 }
 
 /* ------------ Footer section ------------*/
