@@ -350,6 +350,7 @@ header {
 #contact {
   background-color: var(--background-light);
   color: white;
+  text-align: center;
 }
 
 #contact-form {
