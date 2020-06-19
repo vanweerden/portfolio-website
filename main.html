@@ -115,7 +115,7 @@
       <section id="contact">
         <h2>Contact</h2>
         <p>Send me a message and I will respond as soon as possible!</p>
-        <form id="contact-form" action="" method="post">
+        <form id="contact-form" action="" method="post" novalidate>
           <ul>
             <li>
               <label for="form-name">Name</label>
@@ -127,6 +127,9 @@
                 maxlength="50"
                 required  />
             </li>
+            <li class="error"
+              id="name-error"
+              aria-live="polite"  >Error goes here</li>
             <li>
               <label for="form-email">E-mail</label>
               <input type="email"
@@ -136,6 +139,9 @@
                 placeholder="(Required)"
                 required  />
             </li>
+            <li class="error"
+              id="email-error"
+              aria-live="polite"  >Error goes here</li>
             <li>
               <label for="form-subject">Subject</label>
               <input type="text"
@@ -153,6 +159,9 @@
                 maxlength="240"
                 required  ></textarea>
             </li>
+            <li class="error"
+              id="message-error"
+              aria-live="polite"  >Error goes here</li>
             <li>
               <button class="button" type="submit">Send</button>
             </li>

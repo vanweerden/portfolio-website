@@ -16,6 +16,8 @@
 
   --background-dark: #2F2F2F;
   --background-light: #555;
+
+  --error: #ff8080;
 }
 
 /* Base Styling */
@@ -354,6 +356,9 @@ header {
 #contact {
   background-color: var(--background-light);
   color: white;
+}
+
+#contact p {
   text-align: center;
 }
 
@@ -388,7 +393,7 @@ label {
   color: var(--light-grey);
   font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
   padding: 10px 15px;
-  margin: 0 0 0.5em 0;
+  margin: 0 0 10px 0;
   width: 100%;
 }
 
@@ -403,20 +408,34 @@ textarea {
   margin-right: 0;
 }
 
-/* Form validation */
-
-.text-box:required {
-  box-shadow: none;
-  border: none;
-}
-
-.text-box:invalid {
-  outline: none;
-}
-
 .text-box:focus {
   outline: 1px solid var(--secondary-color);
 }
+
+/* Form validation */
+.text-box:invalid {
+  box-shadow: none;
+}
+
+.error {
+  justify-content: flex-start;
+  color: var(--error);
+  font-size: 0.8em;
+  padding: 5px 0 5px 85px;
+}
+
+#name-error {
+  display: none;
+}
+
+#email-error {
+  display: none;
+}
+
+#message-error {
+  display: none;
+}
+
 
 /* ------------ Footer section ------------*/
 #footer {

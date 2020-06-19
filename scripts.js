@@ -1,47 +1,38 @@
-// Toggles state of display between none and block
+/* DROP DOWN MENU */
 function toggleDropMenu() {
-  const dropContent = document.getElementById("dropdown-content");
-  // "block" or "none"
+  // Toggles state of display between none and block
+  const dropContent = document.getElementById('dropdown-content');
+  // 'block' or 'none'
   const dropState = dropContent.style.display;
-  const dropButton = document.getElementById("drop-btn");
+  const dropButton = document.getElementById('drop-btn');
 
   // toggles display
-  dropContent.style.display = dropState == "block" ? "none" : "block";
+  dropContent.style.display = dropState == 'block' ? 'none' : 'block';
 
   // Changes text inside button
-  dropButton.textContent = dropButton.textContent == ">" ? "v" : ">";
+  dropButton.textContent = dropButton.textContent == '>' ? 'v' : '>';
 }
 
 /* FORM VALIDATION */
-function validateEmail(email) {
-  const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return regex.test(String(email).toLowerCase());
-}
+const form = document.getElementById('contact-form');
+const name = document.getElementById('form-name');
+const email = document.getElementById('form-email');
+const msg = document.getElementById('form-message');
 
-// Highlights invalid form input fields on submision of form
-function handleSubmit(e) {
-  e.preventDefault();
-  const formFields = document.getElementsByClassName('text-box');
+const nameError = document.getElementById('name-error');
+const emailError = document.getElementById('email-error');
+const msgError = document.getElementById('message-error');
 
-  let valid = true;
+form.addEventListener('submit', function (event) {
+  // Form submits if all fields are valid
 
-  // If any fields are not valid, highlight and set valid to false
-  for (let field of formFields) {
-    if (field.type === 'email') {
-      if (!validateEmail(field.value)) valid = false;
-    } else if (field.value == null || field.value == '') {
-      valid = false;
-    }
-
-    // If any fields are invalid, prevent submission
-     if (!valid) {
-       e.preventDefault();
-       return false;
-     } else {
-       console.log("SUCCESS!!");
-     }
+  // If not, display appropriate error message
+  if (!name.validity.valid) {
+    showError();
+    event.preventDefault();
   }
-}
+});
 
-const form = document.querySelector('form');
-form.addEventListener('submit', e => handleSubmit(e));
+function showError(field) {
+
+}
