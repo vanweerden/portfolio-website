@@ -26,6 +26,7 @@ function toggleDropMenu() {
 const form = document.getElementById('contact-form');
 const name = document.getElementById('form-name');
 const email = document.getElementById('form-email');
+const subject = document.getElementById('form-subject');
 const msg = document.getElementById('form-message');
 
 const nameError = document.getElementById('name-error');
@@ -33,9 +34,11 @@ const emailError = document.getElementById('email-error');
 const msgError = document.getElementById('message-error');
 
 form.addEventListener('submit', function (event) {
-  console.log('Missing?', msg.validity.valueMissing);
-  console.log('Valid?', msg.validity.valid);
   // Form submits if all fields are valid
+
+  if (subject.value === '') {
+    subject.value = 'No Subject';
+  }
 
   // Clear any previous error messages if fixed by user
   if (name.validity.valid) {
@@ -67,7 +70,7 @@ function handleErrors() {
   }
 
   if (email.validity.valueMissing) {
-    emailError.textContent = 'Please enter an e-mail address.';
+    emailError.textContent = 'Please enter your e-mail address.';
     emailError.style.display = 'inline-block';
   } else if (email.validity.typeMismatch) {
     emailError.textContent = 'Entered value needs to be an e-mail address.';
