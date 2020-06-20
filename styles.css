@@ -393,7 +393,7 @@ label {
   color: var(--light-grey);
   font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
   padding: 10px 15px;
-  margin: 0 0 10px 0;
+  margin: 10px 0 0 0;
   width: 100%;
 }
 
@@ -421,7 +421,7 @@ textarea {
   justify-content: flex-start;
   color: var(--error);
   font-size: 0.8em;
-  padding: 5px 0 5px 85px;
+  padding: 0 0 5px 85px;
 }
 
 #name-error {
