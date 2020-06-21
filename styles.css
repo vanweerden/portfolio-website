@@ -222,6 +222,7 @@ header {
   margin: 0 1em 0 1em;
   max-width: 900px;
   position: relative;
+  top: 15px;
   width: 90vw;
   z-index: 1;
 }
@@ -244,6 +245,28 @@ header {
 #welcome .button {
   align-self: center;
   margin: 4em 0 0 0;
+}
+
+/* Background code */
+.welcome-code {
+  font-family: monospace;
+  opacity: 40%;
+  position: absolute;
+}
+
+.code-comment {
+  color: #d1d1d1;
+}
+
+.code-token {
+  color: #da9eff;
+}
+
+.code-js {
+  font-size: 0.9em;
+  top: 8em;
+  left: 5%;
+  color: #d7ffb3;
 }
 
 
@@ -479,6 +502,10 @@ textarea {
     display: none;
   }
 
+  .code-js {
+    left: 15%;
+  }
+
   #greeting {
     font-size: 2em;
   }
@@ -511,7 +538,17 @@ textarea {
   }
 }
 
+@media screen and (min-width: 700px) {
+  .welcome-code {
+    font-size: 1em;
+  }
+  .code-js {
+    top: 10em;
+  }
+}
+
 @media screen and (min-width: 900px) {
+
   /* Makes project tiles bigger */
   /* .project-cover .project-info {
     height: 375px;
