@@ -252,21 +252,35 @@ header {
   font-family: monospace;
   opacity: 40%;
   position: absolute;
+  font-size: 0.9em;
+}
+
+.js-code {
+  top: 8em;
+  left: 5%;
+  color: #d7ffb3;
 }
 
 .code-comment {
   color: #d1d1d1;
 }
 
-.code-token {
+.js-token {
   color: #da9eff;
 }
 
-.code-js {
-  font-size: 0.9em;
-  top: 8em;
-  left: 5%;
-  color: #d7ffb3;
+.js-variable {
+  color: white;
+}
+
+.css-code {
+  top: 75%;
+  right: 10%;
+  color: #faf27f;
+}
+
+.css-property {
+  color: #b3d9ff;
 }
 
 
@@ -502,8 +516,13 @@ textarea {
     display: none;
   }
 
-  .code-js {
+  .js-code {
     left: 15%;
+  }
+
+  .css-code {
+    top: 70%;
+    right: 15%;
   }
 
   #greeting {
@@ -542,8 +561,15 @@ textarea {
   .welcome-code {
     font-size: 1em;
   }
-  .code-js {
+  .js-code {
     top: 10em;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .css-code {
+    bottom: 50%;
+    right: 33%;
   }
 }
 
