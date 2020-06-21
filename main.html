@@ -68,8 +68,8 @@
               <br>
             }
             </div>
-            <div class="welcome-code html-code">
 
+            <div class="welcome-code html-code">
               &lt;div id="welcome-container"&gt;
                 <br>
                 &emsp;&emsp;&lt;div id="greeting"&gt;My name is &lt;span class="primary"&gt;Andrew&lt;/span&gt;.
@@ -99,8 +99,31 @@
                 &emsp;&emsp;&emsp;&emsp;More&lt;/button&gt;
                 <br>
               &lt;/div&gt;
-
             </div>
+
+            <div class="welcome-code react-code">
+              import React from 'react';
+              <br><br>
+              export const HeaderButton = (props) =&gt; {<br>
+                &emsp;&emsp;let arrow;<br>
+                &emsp;&emsp;if (props.active) {<br>
+                  &emsp;&emsp;&emsp;&emsp;if (props.asc) arrow = '▴';<br>
+                  &emsp;&emsp;&emsp;&emsp;else arrow = '▾';<br>
+                &emsp;&emsp;} else {<br>
+                  &emsp;&emsp;&emsp;&emsp;arrow = null;<br>
+                &emsp;&emsp;}<br>
+                <br>
+                &emsp;&emsp;return (<br>
+                  &emsp;&emsp;&emsp;&emsp;&lt;div className={props.classes}<br>
+                       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onClick={props.handleClick}<br>
+                       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;id={props.id}<br>
+                  &emsp;&emsp;&emsp;&emsp;&gt;<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{props.columnName} {arrow}<br>
+                  &emsp;&emsp;&emsp;&emsp;&lt;/div&gt;<br>
+                &emsp;&emsp;);<br>
+              }
+            </div>
+
           </div>
         </div>
 

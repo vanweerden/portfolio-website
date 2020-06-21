@@ -288,7 +288,7 @@ header {
   color: #b3d9ff;
 }
 
-/* Appears when window is 1200px */
+/* Appears when window is 1538px */
 .html-code {
   display: none;
   position: absolute;
@@ -296,6 +296,14 @@ header {
   top: 25%;
   z-index: 2;
   color: #d1d1d1;
+}
+
+/* Appears when window is 1100px */
+.react-code {
+  display: none;
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
 }
 
 
