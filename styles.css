@@ -279,8 +279,8 @@ header {
 }
 
 .css-code {
-  left: 17%;
-  bottom: 5%;
+  right: 10%;
+  bottom: 3%;
   color: #faf27f;
 }
 
@@ -305,6 +305,7 @@ header {
   bottom: 5%;
   right: 15%;
   z-index: 2;
+  color: #faf27f;
 }
 
 
@@ -545,8 +546,8 @@ textarea {
   }
 
   .css-code {
-    left: 17%;
-    bottom: 5%;
+    right: 30%;
+    bottom: 10%;
   }
 
   #greeting {
@@ -614,6 +615,11 @@ textarea {
 @media screen and (min-width: 1100px) {
   .react-code {
     display: block;
+  }
+
+  .css-code {
+    left: 17%;
+    bottom: 5%;
   }
 }
 

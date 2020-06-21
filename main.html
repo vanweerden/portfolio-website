@@ -102,23 +102,23 @@
             </div>
 
             <div class="welcome-code react-code">
-              import React from 'react';
+              <span class="js-token">import</span> React from 'react';
               <br><br>
-              export const HeaderButton = (props) =&gt; {<br>
-                &emsp;&emsp;let arrow;<br>
-                &emsp;&emsp;if (props.active) {<br>
-                  &emsp;&emsp;&emsp;&emsp;if (props.asc) arrow = '▴';<br>
-                  &emsp;&emsp;&emsp;&emsp;else arrow = '▾';<br>
-                &emsp;&emsp;} else {<br>
-                  &emsp;&emsp;&emsp;&emsp;arrow = null;<br>
+              <span class="js-token">export const</span> HeaderButton = (<span class="js-variable">props</span>) =&gt; {<br>
+                &emsp;&emsp;<span class="js-token">let</span> <span class="js-variable">arrow</span>;<br>
+                &emsp;&emsp;<span class="js-token">if</span> (<span class="js-variable">props</span>.active) {<br>
+                  &emsp;&emsp;&emsp;&emsp;<span class="js-token">if</span> (<span class="js-variable">props</span>.asc) <span class="js-variable">arrow</span> = '▴';<br>
+                  &emsp;&emsp;&emsp;&emsp;<span class="js-token">else</span> <span class="js-variable">arrow</span> = '▾';<br>
+                &emsp;&emsp;} <span class="js-token">else</span> {<br>
+                  &emsp;&emsp;&emsp;&emsp;<span class="js-variable">arrow</span> = null;<br>
                 &emsp;&emsp;}<br>
                 <br>
-                &emsp;&emsp;return (<br>
-                  &emsp;&emsp;&emsp;&emsp;&lt;div className={props.classes}<br>
-                       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onClick={props.handleClick}<br>
-                       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;id={props.id}<br>
+                &emsp;&emsp;<span class="js-token">return</span> (<br>
+                  &emsp;&emsp;&emsp;&emsp;&lt;div className={<span class="js-variable">props</span>.classes}<br>
+                       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onClick={<span class="js-variable">props</span>.handleClick}<br>
+                       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;id={<span class="js-variable">props</span>.id}<br>
                   &emsp;&emsp;&emsp;&emsp;&gt;<br>
-                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{props.columnName} {arrow}<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<span class="js-variable">props</span>.columnName} {<span class="js-variable">arrow</span>}<br>
                   &emsp;&emsp;&emsp;&emsp;&lt;/div&gt;<br>
                 &emsp;&emsp;);<br>
               }
