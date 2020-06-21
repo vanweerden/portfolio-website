@@ -32,16 +32,16 @@
         <!--Background code-->
         <div id="code-container">
           <div class="welcome-code js-code">
-            <span class="js-token">function</span> welcome(<span class="js-variable">wittyWelcome</span>) {
+            <span class="js-token">function</span> welcome(wittyWelcome) {
               <br>
               &emsp;&emsp;<span class="code-comment">// Charm user with wit</span>
               <br>
-              &emsp;&emsp;<span class="js-variable">wittyWelcome</span> =  <span class="js-variable">wittyWelcome</span>
+              &emsp;&emspwittyWelcome =  wittyWelcome
               <br>
               &emsp;&emsp;|| "My name is Andrew. I'm a web developer.";
               <br>
               <br>
-              &emsp;&emsp;<span class="js-token">return</span> <span class="js-variable">wittyWelcome</span>;
+              &emsp;&emsp;<span class="js-token">return</span> wittyWelcome;
               <br>
             }
           </div>
@@ -104,24 +104,39 @@
             <div class="welcome-code react-code">
               <span class="js-token">import</span> React from 'react';
               <br><br>
-              <span class="js-token">export const</span> HeaderButton = (<span class="js-variable">props</span>) =&gt; {<br>
-                &emsp;&emsp;<span class="js-token">let</span> <span class="js-variable">arrow</span>;<br>
-                &emsp;&emsp;<span class="js-token">if</span> (<span class="js-variable">props</span>.active) {<br>
-                  &emsp;&emsp;&emsp;&emsp;<span class="js-token">if</span> (<span class="js-variable">props</span>.asc) <span class="js-variable">arrow</span> = '▴';<br>
-                  &emsp;&emsp;&emsp;&emsp;<span class="js-token">else</span> <span class="js-variable">arrow</span> = '▾';<br>
+              <span class="js-token">export const</span> HeaderButton = (props) =&gt; {<br>
+                &emsp;&emsp;<span class="js-token">let</span> arrow;<br>
+                &emsp;&emsp;<span class="js-token">if</span> (props.active) {<br>
+                  &emsp;&emsp;&emsp;&emsp;<span class="js-token">if</span> (props.asc) arrow = '▴';<br>
+                  &emsp;&emsp;&emsp;&emsp;<span class="js-token">else</span> arrow = '▾';<br>
                 &emsp;&emsp;} <span class="js-token">else</span> {<br>
-                  &emsp;&emsp;&emsp;&emsp;<span class="js-variable">arrow</span> = null;<br>
+                  &emsp;&emsp;&emsp;&emsp;arrow = null;<br>
                 &emsp;&emsp;}<br>
                 <br>
                 &emsp;&emsp;<span class="js-token">return</span> (<br>
-                  &emsp;&emsp;&emsp;&emsp;&lt;div className={<span class="js-variable">props</span>.classes}<br>
-                       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onClick={<span class="js-variable">props</span>.handleClick}<br>
-                       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;id={<span class="js-variable">props</span>.id}<br>
+                  &emsp;&emsp;&emsp;&emsp;&lt;div className={props.classes}<br>
+                       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onClick={props.handleClick}<br>
+                       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;id={prop.id}<br>
                   &emsp;&emsp;&emsp;&emsp;&gt;<br>
-                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<span class="js-variable">props</span>.columnName} {<span class="js-variable">arrow</span>}<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{props.columnName} {arrow}<br>
                   &emsp;&emsp;&emsp;&emsp;&lt;/div&gt;<br>
                 &emsp;&emsp;);<br>
               }
+            </div>
+
+            <div class="welcome-code node-code">
+              'use strict'<br>
+              <span class="js-token">const</span> express = require('express');<br>
+              <span class="js-token">const</span> bodyParser = require('body-parser');<br>
+              <span class="js-token">const</span> cors = require('cors');<br>
+              <br>
+              <span class="js-token">const</span> app = express();<br>
+              <br>
+              <span class="js-token">const</span> port = 5000;<br>
+              <br>
+              app.listen(port, () => {<br>
+              &emsp;&emsp;console.log(`Server running on port: ${port}`);<br>
+              });<br>
             </div>
 
           </div>

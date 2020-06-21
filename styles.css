@@ -253,6 +253,7 @@ header {
   opacity: 20%;
   position: absolute;
   font-size: 0.9em;
+  color: white;
 }
 
 .welcome-code:hover {
@@ -263,7 +264,6 @@ header {
 .js-code {
   top: 8em;
   left: 5%;
-  color: #d7ffb3;
 }
 
 .code-comment {
@@ -272,10 +272,6 @@ header {
 
 .js-token {
   color: #da9eff;
-}
-
-.js-variable {
-  color: white;
 }
 
 .css-code {
@@ -295,7 +291,6 @@ header {
   left: 65%;
   top: 15%;
   z-index: 2;
-  color: #d1d1d1;
 }
 
 /* Appears when window is 1100px */
@@ -305,7 +300,13 @@ header {
   bottom: 5%;
   right: 15%;
   z-index: 2;
-  color: #faf27f;
+}
+
+.node-code {
+  display: none;
+  position: absolute;
+  top: 70%;
+  left: 30%;
 }
 
 
@@ -547,7 +548,6 @@ textarea {
 
   .css-code {
     right: 30%;
-    bottom: 10%;
   }
 
   #greeting {
@@ -589,6 +589,11 @@ textarea {
   .js-code {
     top: 10em;
   }
+
+  .css-code {
+    bottom: 7%;
+
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -618,7 +623,7 @@ textarea {
   }
 
   .css-code {
-    left: 17%;
+    left: 13%;
     bottom: 5%;
   }
 }
@@ -630,7 +635,20 @@ textarea {
 }
 
 @media screen and (min-width: 1538px) {
+  .js-code {
+    left: 25%;
+  }
+
   .html-code {
+    display: block;
+  }
+
+  .css-code {
+    bottom: 33%;
+    left: 8%;
+  }
+
+  .node-code {
     display: block;
   }
 }
