@@ -303,7 +303,7 @@ header {
   display: none;
   position: absolute;
   left: 65%;
-  top: 15%;
+  bottom: 55%;
   z-index: 2;
 }
 
@@ -319,7 +319,7 @@ header {
 .node-code {
   display: none;
   position: absolute;
-  top: 70%;
+  bottom: 5%;
   left: 30%;
 }
 
