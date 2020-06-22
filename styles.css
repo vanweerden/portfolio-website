@@ -18,6 +18,11 @@
   --background-light: #555;
 
   --error: #ff8080;
+
+  --code-comment: #d1d1d1;
+  --code-yellow: #faf27f;
+  --code-blue: #b3d9ff;
+  --code-purple: #da9eff;
 }
 
 /* Base Styling */
@@ -271,17 +276,21 @@ header {
 }
 
 .js-token {
-  color: #da9eff;
+  color: var(--code-purple);
+}
+
+.js-function {
+  color: var(--code-blue);
 }
 
 .css-code {
   right: 10%;
   bottom: 3%;
-  color: #faf27f;
+  color: var(--code-yellow);
 }
 
 .css-property {
-  color: #b3d9ff;
+  color: var(--code-blue);
 }
 
 /* Appears when window is 1538px */
