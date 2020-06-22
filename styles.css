@@ -23,6 +23,7 @@
   --code-yellow: #faf27f;
   --code-blue: #b3d9ff;
   --code-purple: #da9eff;
+  --code-green: #b0e8b4;
 }
 
 /* Base Styling */
@@ -275,22 +276,26 @@ header {
   color: #d1d1d1;
 }
 
-.js-token {
-  color: var(--code-purple);
-}
-
-.js-function {
-  color: var(--code-blue);
-}
-
 .css-code {
   right: 10%;
   bottom: 3%;
   color: var(--code-yellow);
 }
 
-.css-property {
+.code-blue {
   color: var(--code-blue);
+}
+
+.code-purple {
+  color: var(--code-purple);
+}
+
+.code-yellow {
+  color: var(--code-yellow);
+}
+
+.code-green {
+  color: var(--code-green);
 }
 
 /* Appears when window is 1538px */

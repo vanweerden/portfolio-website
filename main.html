@@ -32,16 +32,16 @@
         <!--Background code-->
         <div id="code-container">
           <div class="welcome-code js-code">
-            <span class="js-token">function</span> welcome(wittyWelcome) {
+            <span class="code-purple">function</span> <span class="code-blue">welcome</span>(wittyWelcome) {
               <br>
               &emsp;&emsp;<span class="code-comment">// Charm user with wit</span>
               <br>
-              &emsp;&emspwittyWelcome =  wittyWelcome
+              &emsp;&emsp;wittyWelcome =  wittyWelcome
               <br>
-              &emsp;&emsp;|| "My name is Andrew. I'm a web developer.";
+              &emsp;&emsp;|| <span class="code-green">"My name is Andrew. I'm a web developer."</span>;
               <br>
               <br>
-              &emsp;&emsp;<span class="js-token">return</span> wittyWelcome;
+              &emsp;&emsp;<span class="code-purple">return</span> wittyWelcome;
               <br>
             }
           </div>
@@ -50,21 +50,21 @@
             <br>
             .welcome-code {
               <br>
-              &emsp;&emsp;<span class="css-property">font-family:</span> monospace;
+              &emsp;&emsp;<span class="code-blue">font-family:</span> monospace;
               <br>
-              &emsp;&emsp;<span class="css-property">opacity:</span> 40%;
+              &emsp;&emsp;<span class="code-blue">opacity:</span> 40%;
               <br>
-              &emsp;&emsp;<span class="css-property">position:</span> absolute;
+              &emsp;&emsp;<span class="code-blue">position:</span> absolute;
               <br>
-              &emsp;&emsp;<span class="css-property">font-size:</span> 0.9em;
+              &emsp;&emsp;<span class="code-blue">font-size:</span> 0.9em;
               <br>
             }
             <br><br>
             .css.code {
               <br>
-              &emsp;&emsp;<span class="css-property">top:</span> 80%;
+              &emsp;&emsp;<span class="code-blue">top:</span> 80%;
               <br>
-              &emsp;&emsp;<span class="css-property">right:</span> 10%;
+              &emsp;&emsp;<span class="code-blue">right:</span> 10%;
               <br>
             }
             </div>
@@ -102,40 +102,40 @@
             </div>
 
             <div class="welcome-code react-code">
-              <span class="js-token">import</span> React from 'react';
+              <span class="code-purple">import</span> <span class="code-yellow">React</span> from <span class="code-green">'react'</span>;
               <br><br>
-              <span class="js-token">export const</span> HeaderButton = (props) =&gt; {<br>
-                &emsp;&emsp;<span class="js-token">let</span> arrow;<br>
-                &emsp;&emsp;<span class="js-token">if</span> (props.active) {<br>
-                  &emsp;&emsp;&emsp;&emsp;<span class="js-token">if</span> (props.asc) arrow = '▴';<br>
-                  &emsp;&emsp;&emsp;&emsp;<span class="js-token">else</span> arrow = '▾';<br>
-                &emsp;&emsp;} <span class="js-token">else</span> {<br>
+              <span class="code-purple">export const</span> <span class="code-yellow">HeaderButton</span> = (props) =&gt; {<br>
+                &emsp;&emsp;<span class="code-purple">let</span> arrow;<br>
+                &emsp;&emsp;<span class="code-purple">if</span> (props.<span class="code-yellow">active</span>) {<br>
+                  &emsp;&emsp;&emsp;&emsp;<span class="code-purple">if</span> (props.<span class="code-yellow">asc</span>) arrow = <span class="code-green">'▴'</span>;<br>
+                  &emsp;&emsp;&emsp;&emsp;<span class="code-purple">else</span> arrow = <span class="code-green">'▾'</span>;<br>
+                &emsp;&emsp;} <span class="code-purple">else</span> {<br>
                   &emsp;&emsp;&emsp;&emsp;arrow = null;<br>
                 &emsp;&emsp;}<br>
                 <br>
-                &emsp;&emsp;<span class="js-token">return</span> (<br>
-                  &emsp;&emsp;&emsp;&emsp;&lt;div className={props.classes}<br>
-                       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onClick={props.handleClick}<br>
-                       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;id={prop.id}<br>
+                &emsp;&emsp;<span class="code-purple">return</span> (<br>
+                  &emsp;&emsp;&emsp;&emsp;&lt;div <span class="code-yellow">className</span>={props.<span class="code-yellow">classes</span>}<br>
+                       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-yellow">onClick</span>={props.<span class="code-yellow">handleClick</span>}<br>
+                       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-yellow">id</span>={prop.<span class="code-yellow">id</span>}<br>
                   &emsp;&emsp;&emsp;&emsp;&gt;<br>
-                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{props.columnName} {arrow}<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{props.<span class="code-yellow">columnName</span>} {arrow}<br>
                   &emsp;&emsp;&emsp;&emsp;&lt;/div&gt;<br>
                 &emsp;&emsp;);<br>
               }
             </div>
 
             <div class="welcome-code node-code">
-              'use strict'<br>
-              <span class="js-token">const</span> express = require('express');<br>
-              <span class="js-token">const</span> bodyParser = require('body-parser');<br>
-              <span class="js-token">const</span> cors = require('cors');<br>
+              <span class="code-green">'use strict'</span><br>
+              <span class="code-purple">const</span> express = <span class="code-blue">require</span>(<span class="code-green">'express'</span>);<br>
+              <span class="code-purple">const</span> bodyParser = <span class="code-blue">require</span>(<span class="code-green">'body-parser'</span>);<br>
+              <span class="code-purple">const</span> cors = <span class="code-blue">require</span>(<span class="code-green">'cors'</span>);<br>
               <br>
-              <span class="js-token">const</span> app = express();<br>
+              <span class="code-purple">const</span> app = <span class="code-blue">express</span>();<br>
               <br>
-              <span class="js-token">const</span> port = 5000;<br>
+              <span class="code-purple">const</span> port = 5000;<br>
               <br>
-              app.listen(port, () => {<br>
-              &emsp;&emsp;console.log(`Server running on port: ${port}`);<br>
+              app.<span class="code-blue">listen</span>(port, () => {<br>
+              &emsp;&emsp;console.<span class="code-blue">log</span>(<span class="code-green">`Server running on port: </span>${<span class="code-green">port</span>}`</span>);<br>
               });<br>
             </div>
 
