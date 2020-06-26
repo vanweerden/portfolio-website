@@ -1,28 +1,27 @@
 <?php
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
-// $name = $email = $subject = $message = "";
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+$name = $visitor_email = $subject = $message = "";
 
 // Assign input to variables
-// if($_SERVER["REQUEST_METHOD"] == "POST") {
-//   $name = cleanup_input($_POST["name"]);
-//   $visitor_email = cleanup_input($_POST["email"]);
-//   $subject = cleanup_input($_POST["subject"]);
-//   $message = cleanup_input($_POST["message"]);
-// }
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = cleanup_input($_POST["name"]);
+  $visitor_email = cleanup_input($_POST["email"]);
+  $subject = cleanup_input($_POST["subject"]);
+  $message = cleanup_input($_POST["message"]);
+}
 
 // Clean up data
-// function cleanup_input($data) {
-//   $data = trim($data);
-//   $data = stripslashes($data);
-//   $data = htmlspecialchars($data);
-//   return $data;
-// }
+function cleanup_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 
 // Send as e-mail
 $email_from = "andrew@vanweerden.me";
-// $email_subject = "$subject";
 // $email_body = "You have received a new message from $name\n".
 //                   "Here is the message:\n $message";
 //
@@ -31,7 +30,7 @@ $headers = "From: $email_from \r\n";
 // $headers .= "Reply-To: $visitor_email\r\n";
 
 // TEST
-$test_message = "I hope this works, mate!\r\n";
+$test_message = "Testing again withou variables uncommented.\r\n";
 
-mail($to,"test email",$test_message,$headers);
+mail($to,$subject,$test_message,$headers);
 ?>
