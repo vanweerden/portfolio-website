@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 $name = $email = $subject = $message = "";
 
 // Assign input to variables
