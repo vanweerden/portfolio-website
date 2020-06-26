@@ -28,10 +28,7 @@ $headers = "From: $email_from \r\n";
 $headers .= "Reply-To: $visitor_email\r\n";
 
 $success = mail($to,$subject,$email_body,$headers);
-header("Location: index.html");
-exit;
+
 // If no errors, display success message
-// $message = $success ? 'Thank you for your e-mail! I will respond as soon as possible.' : 'There was a problem sending your message. Terribly sorry about that!';
-// $message = "Success!";
-// echo "<div class='message'>", $message, "</div>";
+echo "<div>", "Thank you for your e-mail! I will respond as soon as possible.", "</div>"
 ?>
