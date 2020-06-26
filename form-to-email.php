@@ -2,9 +2,10 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-$name = $visitor_email = $subject = $message = "";
 
 // Assign input to variables
+$name = $visitor_email = $subject = $message = "";
+
 if($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = cleanup_input($_POST["name"]);
   $visitor_email = cleanup_input($_POST["email"]);
@@ -21,16 +22,14 @@ function cleanup_input($data) {
 }
 
 // Send as e-mail
-$email_from = "andrew@vanweerden.me";
-$email_body = "You have received a new message from $name\r\n".
-                  "Here is the message:\r\n $message";
-//
 $to = "ando.vanweerden@gmail.com";
+
+$email_from = "andrew@vanweerden.me";
+$email_body = "You have received a new message from $name\n".
+                  "Here is the message:\n $message";
+
 $headers = "From: $email_from \r\n";
 $headers .= "Reply-To: $visitor_email\r\n";
-
-// TEST
-$test_message = "Testing again withou variables uncommented.\r\n";
 
 mail($to,$subject,$email_body,$headers);
 ?>
