@@ -21,9 +21,9 @@ function cleanup_input($data) {
 }
 
 // Send as e-mail
-$email_from = "andrew@vanweerden.me";
-// $email_body = "You have received a new message from $name\n".
-//                   "Here is the message:\n $message";
+$email_from = $visitor_email;
+$email_body = "You have received a new message from $name\n".
+                  "Here is the message:\n $message";
 //
 $to = "ando.vanweerden@gmail.com";
 $headers = "From: $email_from \r\n";
@@ -32,5 +32,5 @@ $headers = "From: $email_from \r\n";
 // TEST
 $test_message = "Testing again withou variables uncommented.\r\n";
 
-mail($to,$subject,$test_message,$headers);
+mail($to,$subject,$email_body,$headers);
 ?>
