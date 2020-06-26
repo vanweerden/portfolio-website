@@ -14,15 +14,6 @@ function toggleDropMenu() {
 }
 
 /* FORM VALIDATION */
-// when user clicks Send button:
-// if any field is not valid
-// 1 error shows up below that field
-  // select each error element
-  // change text content of that element
-  // change css of that element to display
-// 2 submission is prevented by preventDefault
-// if all fields are valid, form submits (test: console.log)
-
 const form = document.getElementById('contact-form');
 const name = document.getElementById('form-name');
 const email = document.getElementById('form-email');
