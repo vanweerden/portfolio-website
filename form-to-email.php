@@ -27,8 +27,8 @@ $email_from = "andrew@vanweerden.me";
 //                   "Here is the message:\n $message";
 //
 $to = "ando.vanweerden@gmail.com";
-$headers = "From: $email_from\r\n";
-$headers .= "Reply-To: $visitor_email\r\n";
+$headers = "From: $email_from \r\n";
+// $headers .= "Reply-To: $visitor_email\r\n";
 
 // TEST
 $test_message = "I hope this works, mate!\r\n";
