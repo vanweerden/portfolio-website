@@ -28,7 +28,10 @@ $headers = "From: $email_from \r\n";
 $headers .= "Reply-To: $visitor_email\r\n";
 
 $success = mail($to,$subject,$email_body,$headers);
-
-// If no errors, display success message
-echo "<div>", "Thank you for your e-mail! I will respond as soon as possible.", "</div>"
+// TODO: decide how to handle submission
+// Option 1
+header('https://vanweerden.me#contact');
+exit;
+// Option 2: If no errors, display success message (then redirect?)
+// echo "<div>", "Thank you for your e-mail! I will respond as soon as possible.", "</div>"
 ?>
