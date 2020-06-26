@@ -28,10 +28,7 @@ function cleanup_input($data) {
 // $headers .= "Reply-To: $visitor_email\r\n";
 
 // TEST
-$test_to = "ando.vanweerden@gmail.com";
-$test_subject = "Testing, testing";
 $test_message = "I hope this works, mate!\r\n";
-$test_headers = "From: andrew@vanweerden.me";
 
-mail($test_to,$test_subject,$test_message,$test_headers);
+mail("ando.vanweerden@gmail.com","test email",$test_message);
 ?>
