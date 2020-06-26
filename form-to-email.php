@@ -41,8 +41,9 @@
   $success = mail($to,$subject,$email_body,$headers);
 
   // If no errors, display success message
-  $message = $success ? 'Thank you for your e-mail! I will respond as soon as possible.' : 'There was a problem sending your message. Terribly sorry about that!';
-  echo "<div class='message'>$message</div>";
+  // $message = $success ? 'Thank you for your e-mail! I will respond as soon as possible.' : 'There was a problem sending your message. Terribly sorry about that!';
+  $message = "Success!";
+  echo "<div class='message'>", $message, "</div>";
   ?>
 
   </body>
