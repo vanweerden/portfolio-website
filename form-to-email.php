@@ -32,6 +32,6 @@ $headers = "From: $email_from \r\n";
 
 // TEST
 $test_message = "I hope this works, mate!\r\n";
-$headers
+
 mail($to,"test email",$test_message,$headers);
 ?>
