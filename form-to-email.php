@@ -18,14 +18,20 @@ function cleanup_input($data) {
 }
 
 // Send as e-mail
-$email_from = "andrew@vanweerden.me";
-$email_subject = $subject;
-$email_body = "You have received a new message from $name\n".
-                  "Here is the message:\n $message";
+// $email_from = "andrew@vanweerden.me";
+// $email_subject = "$subject";
+// $email_body = "You have received a new message from $name\n".
+//                   "Here is the message:\n $message";
+//
+// $to = "ando.vanweerden@gmail.com";
+// $headers = "From: $email_from\r\n";
+// $headers .= "Reply-To: $visitor_email\r\n";
 
-$to = "ando.vanweerden@gmail.com";
-$headers = "From: $email_from \r\n";
-$headers .= "Reply-To: $visitor_email\r\n";
+// TEST
+$test_to = "ando.vanweerden@gmail.com";
+$test_subject = "Testing, testing";
+$test_message = "I hope this works, mate!\r\n";
+$test_headers = "From: andrew@vanweerden.me";
 
-mail($to,$subject,$email_body,$headers);
+mail($test_to,$test_subject,$test_message,$test_headers);
 ?>
