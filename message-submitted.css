@@ -1,0 +1,23 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2F2F2F;
+  color: white;
+}
+
+.message-container {
+  background-color: #555;
+  padding: 5em;
+}
+
+a {
+  color: #b3d9ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  transition: 250ms;
+}
