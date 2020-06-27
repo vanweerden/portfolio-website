@@ -10,10 +10,10 @@
       <div class='message-container'>
         <?php
         // Checks data for header injection (takes array)
-        function checkFields($data) {
+        function checkFields($array) {
           $injection = false;
-          for ($i = 0; $i < count($data); $n++) {
-            if (preg_match("/%0A/i", $data[$n]) || preg_match("/%0D/i", $data[$n]) || preg_match("/\\r/i", $data[$n]) || preg_match("/\\n/i", $data[$n])) {
+          for ($i = 0; $i < count($array); $i++) {
+            if (preg_match("/%0A/i", $array[$n]) || preg_match("/%0D/i", $array[$n]) || preg_match("/\\r/i", $array[$n]) || preg_match("/\\n/i", $array[$n])) {
               $injection = true;
             }
           }
