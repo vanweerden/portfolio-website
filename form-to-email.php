@@ -13,11 +13,14 @@
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
+
         // Checks data for header injection (takes array)
         function checkFields($array) {
           $injection = false;
           for ($i = 0; $i < count($array); $i++) {
             if (preg_match("/%0A/i", $array[$i]) || preg_match("/%0D/i", $array[$i]) || preg_match("/\\r/i", $array[$i]) || preg_match("/\\n/i", $array[$i])) {
+              echo "INJECTION DETECTED!!!";
+              echo "in $array[$i]";
               $injection = true;
             }
           }
@@ -44,9 +47,6 @@
 
         // Check for injection
         $injection_detected = checkFields(array($name, $visitor_email, $subject, $message));
-
-        // Debugging
-        echo "Injection: ", $injection_detected;
 
         if ($injection_detected == true) {
           echo "<div class='message'>", "Header injection detected! Message not sent.", "</div>";
