@@ -37,9 +37,9 @@
     $success = mail($to,$subject,$email_body,$headers);
 
     // Option 2: If no errors, display success message (then redirect?)
-    echo $success;
-    echo "Changed";
-    echo "<div>", "Thank you for your e-mail! I will respond as soon as possible.", "</div>"
+    if ($success == true) {
+          echo "<div>", "Thank you for your e-mail! I will respond as soon as possible.", "</div>";
+    }
     ?>
   </body>
 </html>
