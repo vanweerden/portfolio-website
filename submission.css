@@ -30,6 +30,10 @@ body {
   padding: 5em;
 }
 
+.message {
+  margin-bottom: 1em;
+}
+
 a {
   color: #b3d9ff;
   text-decoration: none;
