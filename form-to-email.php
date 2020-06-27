@@ -14,14 +14,21 @@
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
 
+        function cleanup_input($data) {
+          $data = trim($data);
+          $data = stripslashes($data);
+          $data = htmlspecialchars($data);
+          return $data;
+        }
+
         // Get data
-        // $name = $visitor_email = $subject = $message = "";
+        $name = $visitor_email = $subject = $message = "";
 
         if($_SERVER["REQUEST_METHOD"] == "POST") {
-          $name = $_POST["name"];
-          $visitor_email = $_POST["email"];
-          $subject = $_POST["subject"];
-          $message = $_POST["message"];
+          $name = cleanup_input($_POST["name"]);
+          $visitor_email = cleanup_input($_POST["email"]);
+          $subject = cleanup_input($_POST["subject"]);
+          $message = cleanup_input($_POST["message"]);
         }
 
         // Checks data for header injection (takes array)
@@ -41,19 +48,6 @@
           echo "<div class='message'>", "Header injection detected! Message not sent.", "</div>";
           exit(1);
         }
-
-        // Clean up data
-        function cleanup_input($data) {
-          $data = trim($data);
-          $data = stripslashes($data);
-          $data = htmlspecialchars($data);
-          return $data;
-        }
-
-        $name = cleanup_input($name);
-        $visitor_email = cleanup_input($visitor_email);
-        $subject = cleanup_input($subject);
-        $message = cleanup_input($message);
 
         // Send as e-mail
         $to = "ando.vanweerden@gmail.com";
