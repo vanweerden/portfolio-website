@@ -2,7 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Portfolio of Andrew van Weerden | Message sent</title>
+    <link rel="stylesheet" href="submission.css">
   </head>
   <body>
     <div class='page'>
