@@ -13,7 +13,7 @@
         function checkFields($data) {
           $injection = false;
           for ($i = 0; $i < count($values); $n++) {
-            if (preg_match("%0A", $values[$n]) || preg_match("%0D", $values[$n]) || preg_match("\\r", $values[$n]) || preg_match("\\n", $values[$n])) {
+            if (preg_match("/%0A/i", $values[$n]) || preg_match("/%0D/i", $values[$n]) || preg_match("/\\r/i", $values[$n]) || preg_match("/\\n/i", $values[$n])) {
               $injection = true;
             }
           }
