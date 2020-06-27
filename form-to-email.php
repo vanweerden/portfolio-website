@@ -35,7 +35,7 @@
           return $injection;
         }
 
-        echo (strpos($message, "\r");
+        echo strpos($message, "\r";
 
         $injection = checkFields(array($name, $visitor_email, $subject, $message));
 
