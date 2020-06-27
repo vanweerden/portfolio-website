@@ -9,6 +9,10 @@
     <div class='main'>
       <div class='message-container'>
         <?php
+        // Display all errors
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
         // Checks data for header injection (takes array)
         function checkFields($array) {
           $injection = false;
@@ -39,10 +43,12 @@
         }
 
         // Check for injection
-        $injection = checkFields(array($name, $visitor_email, $subject, $message));
+        $injection_detected = checkFields(array($name, $visitor_email, $subject, $message));
+
         // Debugging
-        echo "Injection: ", $injection;
-        if ($injection == true) {
+        echo "Injection: ", $injection_detected;
+
+        if ($injection_detected == true) {
           echo "<div class='message'>", "Header injection detected! Message not sent.", "</div>";
           exit(1);
         }
