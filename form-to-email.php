@@ -38,8 +38,12 @@
 
     // Option 2: If no errors, display success message (then redirect?)
     if ($success == true) {
-          echo "<div>", "Thank you for your e-mail! I will respond as soon as possible.", "</div>";
+      $response = "Thank you for your message! I will respond as soon as possible.";
+    } else {
+      $response = "Something went wrong and your message was not sent successfully.";
     }
+    
+    echo "<div class='message'>", $response, "</div>";
     ?>
   </body>
 </html>
