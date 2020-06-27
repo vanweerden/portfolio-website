@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="submission.css">
   </head>
   <body>
-    <div class='page'>
+    <div class='main'>
       <div class='message-container'>
         <?php
         // Assign input to variables

@@ -7,11 +7,15 @@
   sizing: border-box;
 }
 
+body, html {
+  height: 100%;
+}
+
 body {
   font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
 }
 
-.page {
+.main {
   height: 100%;
   display: flex;
   flex-direction: column;
