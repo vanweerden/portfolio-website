@@ -9,6 +9,25 @@
     <div class='main'>
       <div class='message-container'>
         <?php
+        // Checks data for header injection (takes array)
+        function checkFields($data) {
+          $injection = false;
+          for ($i = 0; $i < count($values); $n++) {
+            if (preg_match("%0A", $values[$n]) || preg_match("%0D", $values[$n]) || preg_match("\\r", $values[$n]) || preg_match("\\n", $values[$n])) {
+              $injection = true;
+            }
+          }
+          return $injection;
+        }
+
+        // Cleans up data
+        function cleanup_input($data) {
+          $data = trim($data);
+          $data = stripslashes($data);
+          $data = htmlspecialchars($data);
+          return $data;
+        }
+
         // Assign input to variables
         $name = $visitor_email = $subject = $message = "";
 
@@ -19,12 +38,11 @@
           $message = cleanup_input($_POST["message"]);
         }
 
-        // Clean up data
-        function cleanup_input($data) {
-          $data = trim($data);
-          $data = stripslashes($data);
-          $data = htmlspecialchars($data);
-          return $data;
+        // Check for injection
+        $injection = checkFields(Array($name, $visitor_email, $subject, $message));
+        if ($injection == true) {
+          echo "<div class='message'>", "Header injection detected! Message not sent.", "</div>";
+          exit(1);
         }
 
         // Send as e-mail
@@ -39,7 +57,7 @@
 
         $success = mail($to,$subject,$email_body,$headers);
 
-        // Option 2: If no errors, display success message (then redirect?)
+        // mail() returns true, display success message (then redirect?)
         if ($success == true) {
           $response = "Thank you for your message! I will respond as soon as possible.";
         } else {
