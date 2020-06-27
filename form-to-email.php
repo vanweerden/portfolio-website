@@ -18,9 +18,7 @@
         function checkFields($array) {
           $injection = false;
           for ($i = 0; $i < count($array); $i++) {
-            if (preg_match("/%0A/i", $array[$i]) || preg_match("/%0D/i", $array[$i]) || preg_match("/\\r/i", $array[$i]) || preg_match("/\\n/i", $array[$i])) {
-              echo "INJECTION DETECTED!!!";
-              echo "in $array[$i]";
+            if (preg_match("/%0A/i", $array[$i]) || preg_match("/%0D/i", $array[$i]) || preg_match("~\R~", $array[$i]) || preg_match("/\\n/i", $array[$i])) {
               $injection = true;
             }
           }
