@@ -39,7 +39,9 @@
         }
 
         // Check for injection
-        $injection = checkFields(Array($name, $visitor_email, $subject, $message));
+        $injection = checkFields(array($name, $visitor_email, $subject, $message));
+        // Debugging
+        echo "Injection: ", $injection;
         if ($injection == true) {
           echo "<div class='message'>", "Header injection detected! Message not sent.", "</div>";
           exit(1);
