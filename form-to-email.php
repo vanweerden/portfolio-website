@@ -21,32 +21,19 @@
           return $data;
         }
 
-        // Get data
+        // Prevents header injection attacks
+        function safe($field) {
+          return ( str_ireplace( array( "\r", "\n", "%0a", "%0d", "Content-Type:", "bcc:", "to:", "cc:" ), "", $field ) );
+        }
+
+        // Get data and make it safe
         $name = $visitor_email = $subject = $message = "";
 
         if($_SERVER["REQUEST_METHOD"] == "POST") {
-          $name = cleanup_input($_POST["name"]);
-          $visitor_email = cleanup_input($_POST["email"]);
-          $subject = cleanup_input($_POST["subject"]);
-          $message = cleanup_input($_POST["message"]);
-        }
-
-        // Checks data for header injection (takes array)
-        function checkFields($array) {
-          $injection = false;
-          for ($i = 0; $i < count($array); $i++) {
-            if (preg_match("/%0A/i", $array[$i]) || preg_match("/%0D/i", $array[$i]) || preg_match( "/\r/i", $array[$i] || preg_match( "/\n/i", $array[$i])) {
-              $injection = true;
-            }
-          }
-          return $injection;
-        }
-
-        $injection = checkFields(array($name, $visitor_email, $subject, $message));
-
-        if ($injection == true) {
-          echo "<div class='message'>", "Header injection detected! Message not sent.", "</div>";
-          exit(1);
+          $name = cleanup_input(safe($_POST["name"]));
+          $visitor_email = cleanup_input(safe($_POST["email"]));
+          $subject = cleanup_input(safe($_POST["subject"]));
+          $message = cleanup_input(safe($_POST["message"]));
         }
 
         // Send as e-mail
