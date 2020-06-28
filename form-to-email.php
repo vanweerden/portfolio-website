@@ -23,7 +23,7 @@
 
         // Prevents header injection attacks
         function safe($field) {
-          return ( str_ireplace( array( "\r", "\n", "%0a", "%0d", "Content-Type:", "bcc:", "to:", "cc:" ), "", $field ) );
+          return ( str_ireplace( array( '\r', '\n', "%0a", "%0d", "Content-Type:", "bcc:", "to:", "cc:" ), "", $field ) );
         }
 
         // Get data and make it safe
