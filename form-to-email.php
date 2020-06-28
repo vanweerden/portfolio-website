@@ -32,7 +32,7 @@
         if($_SERVER["REQUEST_METHOD"] == "POST") {
           $name = cleanup_input(safe($_POST["name"]));
           $visitor_email = cleanup_input(safe($_POST["email"]));
-          $subject = safe($_POST["subject"]);
+          $subject = cleanup_input(safe($_POST["subject"]));
           $message = cleanup_input(safe($_POST["message"]));
         }
 
