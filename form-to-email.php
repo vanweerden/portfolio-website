@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Portfolio of Andrew van Weerden | Message sent</title>
-    <link rel="stylesheet" href="submission.css">
+    <link rel="stylesheet" href="styles/submission.css">
   </head>
   <body>
     <div class='main'>

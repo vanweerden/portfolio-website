@@ -79,12 +79,12 @@ p {
   color: var(--primary-color);
 }
 
-.secondary {
-  color: var(--secondary-color);
-}
-
 .primary-light {
   color: var(--primary-color-light);
+}
+
+.secondary {
+  color: var(--secondary-color);
 }
 
 .secondary-light {
@@ -375,21 +375,21 @@ header {
 
 /* Slacker News */
 .project-1 {
-  background-image: url(images/slacker-news.jpg);
+  background-image: url(../images/slacker-news.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 /* Portfolio Website */
 .project-2 {
-  background-image: url(images/portfolio.jpg);
+  background-image: url(../images/portfolio.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 /* Drum Kit */
 .project-3 {
-  background-image: url(images/drum-kit.jpg);
+  background-image: url(../images/drum-kit.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
