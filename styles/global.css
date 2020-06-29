@@ -1,0 +1,81 @@
+/* Sitewide Styling */
+@import url(https://fonts.googleapis.com/css?family=Raleway&display=swap);
+
+:root {
+  --text-light: #E6E6E6;
+  --text-dark: #999;
+
+  /* Light Blue */
+  --primary-color: #4da6ff;
+  --primary-color-dark: #06c;
+  --primary-color-light: #b3d9ff;
+
+  /* Orange */
+  --secondary-color: #ff914d;
+  --secondary-color-light: #ffc099;
+  --secondary-color-dark: #e65800;
+
+  --background-dark: #2F2F2F;
+  --background-light: #555;
+
+  --error: #ff8080;
+
+  --code-comment: #d1d1d1;
+  --code-yellow: #faf27f;
+  --code-blue: #b3d9ff;
+  --code-purple: #da9eff;
+  --code-green: #b0e8b4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--text-dark);
+  font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1.5;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin: 0.5em 0;
+}
+
+.primary {
+  color: var(--primary-color);
+}
+
+.primary-light {
+  color: var(--primary-color-light);
+}
+
+.secondary {
+  color: var(--secondary-color);
+}
+
+.secondary-light {
+  color: var(--secondary-color-light);
+}
+
+a {
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color-light);
+  transition: 250ms;
+}
+
+a:active {
+  color: var(--primary-color);
+  font-weight: normal;
+}
