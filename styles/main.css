@@ -39,8 +39,9 @@ h2:after {
   border: 2px solid white;
   border-radius: 0;
   color: white;
-  height: 50px;
-  width: 150px;
+  height: 100px;
+  width: 300px;
+  font-size: 0.7em;
 }
 
 .button:hover {
@@ -475,10 +476,6 @@ textarea {
 @media screen and (min-width: 600px) {
   #main-nav {
     display: flex;
-  }
-
-  header {
-    /* height: 70px; */
   }
 
   #dropdown {
