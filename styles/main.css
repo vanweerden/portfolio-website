@@ -115,7 +115,7 @@ h2:after {
 header {
   background-color: black;
   display: flex;
-  height: 70px;
+  height: 150px;
   justify-content: center;
   overflow: hidden;
   position: fixed;
@@ -442,7 +442,6 @@ textarea {
   display: none;
 }
 
-
 /* ------------ Footer section ------------*/
 #footer {
   align-items: center;
@@ -476,6 +475,10 @@ textarea {
 @media screen and (min-width: 600px) {
   #main-nav {
     display: flex;
+  }
+
+  header {
+    /* height: 70px; */
   }
 
   #dropdown {
@@ -515,10 +518,6 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-
-  h2 {
-    font-size: 2em;
   }
 }
 

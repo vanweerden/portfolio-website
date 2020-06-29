@@ -37,6 +37,7 @@ body {
   color: var(--text-dark);
   font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
   line-height: 1.5;
+  font-size: 2em;
 }
 
 main {
@@ -78,4 +79,14 @@ a:hover {
 a:active {
   color: var(--primary-color);
   font-weight: normal;
+}
+
+/* Break points (font sizes) */
+@media screen and (min-width: 600px) {
+  body {
+    /* font-size: 1em; */
+  }
+  h2 {
+    font-size: 2em;
+  }
 }
