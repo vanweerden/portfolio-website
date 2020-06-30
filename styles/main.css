@@ -172,7 +172,6 @@ header {
   align-self: flex-start;
   line-height: 2;
   text-align: left;
-  display: none;
 }
 
 #welcome .button {
@@ -198,7 +197,6 @@ header {
 .js-code {
   top: 8em;
   left: 5%;
-  display: none;
 }
 
 .code-comment {
@@ -207,7 +205,6 @@ header {
 
 /* Appears when screen larger than 898px */
 .css-code {
-  display: none;
   right: 10%;
   bottom: 3%;
   color: var(--code-yellow);
@@ -478,20 +475,24 @@ textarea {
 
 /* ------------ BREAK POINTS ------------*/
 
-/* Handles landscape mobile */
-@media screen and (min-height: 459px) {
-  #blurb {
-    display: block;
+/* Handles landscape mobile (low height) */
+@media screen and (max-height: 536px) {
+  #welcome {
+    height: auto;
+  }
+
+  #welcome-container {
+    margin-top: 3.5em;
   }
 }
 
-
-@media screen and (min-height: 896px) {
+@media screen and (max-height: 896px) {
   .css-code, .js-code {
-    display: block;
+    display: none;
   }
 }
 
+/* Handles larger widths */
 @media screen and (min-width: 600px) {
   #main-nav {
     display: flex;
