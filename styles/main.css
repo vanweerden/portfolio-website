@@ -115,7 +115,7 @@ h2:after {
 header {
   background-color: black;
   display: flex;
-  height: 150px;
+  height: 70px;
   justify-content: center;
   overflow: hidden;
   position: fixed;

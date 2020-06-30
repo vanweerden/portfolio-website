@@ -82,9 +82,6 @@ a:active {
 
 /* Break points (font sizes) */
 @media screen and (min-width: 600px) {
-  body {
-    /* font-size: 1em; */
-  }
   h2 {
     font-size: 2em;
   }
