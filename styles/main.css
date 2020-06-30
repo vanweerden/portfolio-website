@@ -59,7 +59,7 @@ h2:after {
 }
 
 
-/* ------------Drop menu------------ */
+/* ------------DROP MENU------------ */
 /* Dropdown Button */
 #drop-btn {
   background-color: black;
@@ -111,7 +111,7 @@ h2:after {
   color: var(--primary-color-light);
 }
 
-/* ------------Nav bar------------ */
+/* ------------NAV BAR------------ */
 header {
   background-color: black;
   display: flex;
@@ -135,7 +135,7 @@ header {
   margin: 0 1em;
 }
 
-/* ------------Landing section------------ */
+/* ------------WELCOME SECTION------------ */
 #welcome {
   align-items: center;
   background-color: var(--background-dark);
@@ -172,6 +172,7 @@ header {
   align-self: flex-start;
   line-height: 2;
   text-align: left;
+  display: none;
 }
 
 #welcome .button {
@@ -193,16 +194,20 @@ header {
   transition: 700ms;
 }
 
+/* Appears when screen larger than 898px */
 .js-code {
   top: 8em;
   left: 5%;
+  display: none;
 }
 
 .code-comment {
   color: #d1d1d1;
 }
 
+/* Appears when screen larger than 898px */
 .css-code {
+  display: none;
   right: 10%;
   bottom: 3%;
   color: var(--code-yellow);
@@ -471,7 +476,22 @@ textarea {
   color: var(--secondary-color);
 }
 
-/* ------------ Break points ------------*/
+/* ------------ BREAK POINTS ------------*/
+
+/* Handles landscape mobile */
+@media screen and (min-height: 459px) {
+  #blurb {
+    display: block;
+  }
+}
+
+
+@media screen and (min-height: 896px) {
+  .css-code, .js-code {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 600px) {
   #main-nav {
     display: flex;
