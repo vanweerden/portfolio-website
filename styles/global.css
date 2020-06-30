@@ -33,6 +33,12 @@
   padding: 0;
 }
 
+/* Fixes white bars on sides of mobile landscape */
+html, body {
+  width: 100%;
+  overflow: hidden;
+}
+
 body {
   color: var(--text-dark);
   font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
@@ -46,7 +52,7 @@ main {
 }
 
 p {
-  margin: 0.5em 0;
+  margin: 1em 0;
 }
 
 .primary {
