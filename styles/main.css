@@ -84,6 +84,7 @@ h2:after {
 #dropdown {
   text-align: right;
   width: 100vw;
+  z-index: 9998;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -117,7 +118,6 @@ header {
   display: flex;
   height: 70px;
   justify-content: center;
-  /* overflow: hidden; */
   position: fixed;
   top: 0;
   width: 100%;
