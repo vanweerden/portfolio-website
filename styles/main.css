@@ -84,7 +84,6 @@ h2:after {
 #dropdown {
   text-align: right;
   width: 100vw;
-  z-index: 9998;
 }
 
 /* Dropdown Content (Hidden by Default) */

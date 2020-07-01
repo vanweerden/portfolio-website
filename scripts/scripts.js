@@ -1,15 +1,11 @@
 /* DROP DOWN MENU */
 function toggleDropMenu() {
   // Toggles state of display between none and block
-  const dropContent = document.getElementById('dropdown-content');
-  // 'block' or 'none'
-  const dropState = dropContent.style.display;
-  const dropButton = document.getElementById('drop-btn');
+  var dropContent = document.getElementById('dropdown-content');
+  var dropState = dropContent.style.display;
+  var dropButton = document.getElementById('drop-btn');
 
-  // toggles display
   dropContent.style.display = dropState == 'block' ? 'none' : 'block';
-
-  // Changes text inside button
   dropButton.textContent = dropButton.textContent == '>' ? 'v' : '>';
 }
 
