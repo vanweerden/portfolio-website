@@ -88,7 +88,8 @@ h2:after {
 
 /* Dropdown Content (Hidden by Default) */
 #dropdown-content {
-  background-color: rgba(0, 0, 0, .8);
+  /* background-color: rgba(0, 0, 0, .8); */
+  background-color: black;
   display: none;
   position: fixed;
   text-align: center;
