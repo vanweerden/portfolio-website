@@ -117,7 +117,7 @@ header {
   display: flex;
   height: 70px;
   justify-content: center;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: fixed;
   top: 0;
   width: 100%;
@@ -475,7 +475,7 @@ textarea {
 
 /* ------------ BREAK POINTS ------------*/
 
-/* Handles landscape mobile (low height) */
+/* Handles landscape mobile */
 @media screen and (max-height: 536px) {
   #welcome {
     height: auto;
@@ -486,7 +486,7 @@ textarea {
   }
 }
 
-@media screen and (max-height: 896px) {
+@media screen and (max-height: 840px) {
   .css-code, .js-code {
     display: none;
   }
