@@ -1,9 +1,9 @@
 /* DROP DOWN MENU */
 function toggleDropMenu() {
   // Toggles state of display between none and block
-  var dropContent = document.getElementById('dropdown-content');
-  var dropState = dropContent.style.display;
-  var dropButton = document.getElementById('drop-btn');
+  const dropContent = document.getElementById('dropdown-content');
+  const dropState = dropContent.style.display;
+  const dropButton = document.getElementById('drop-btn');
 
   dropContent.style.display = dropState == 'block' ? 'none' : 'block';
   dropButton.textContent = dropButton.textContent == '>' ? 'v' : '>';
