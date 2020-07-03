@@ -153,6 +153,7 @@ header {
   justify-content: center;
   margin: 0 1em 0 1em;
   max-width: 900px;
+  padding-bottom: 2em;
   position: relative;
   top: 15px;
   width: 90vw;
@@ -182,7 +183,7 @@ header {
 /* Background code */
 .welcome-code {
   font-family: monospace;
-  opacity: 20%;
+  opacity: 15%;
   position: absolute;
   font-size: 0.9em;
   color: white;
@@ -196,17 +197,18 @@ header {
 /* Appears when screen larger than 898px */
 .js-code {
   top: 8em;
-  left: 5%;
+  left: 10%;
 }
 
 .code-comment {
   color: #d1d1d1;
 }
 
-/* Appears when screen larger than 898px */
+/* Appears at 1400px */
 .css-code {
-  right: 10%;
-  bottom: 3%;
+  bottom: 40%;
+  display: none;
+  left: 7%;
   color: var(--code-yellow);
 }
 
@@ -226,7 +228,7 @@ header {
   color: var(--code-green);
 }
 
-/* Appears when window is 1538px */
+/* Appears when window is 1111px */
 .html-code {
   display: none;
   position: absolute;
@@ -240,15 +242,28 @@ header {
   display: none;
   position: absolute;
   bottom: 5%;
-  right: 15%;
+  right: 20%;
   z-index: 2;
 }
 
 .node-code {
-  display: none;
   position: absolute;
   bottom: 5%;
-  left: 30%;
+  left: 20%;
+}
+
+.filler-code-top {
+  display: none;
+  position: absolute;
+  top: 15%;
+  left: 40%;
+}
+
+.filler-code-bottom {
+  display: none;
+  position: absolute;
+  bottom: 25%;
+  left: 40%;
 }
 
 
@@ -505,12 +520,6 @@ textarea {
   }
 }
 
-@media screen and (max-height: 840px) {
-  .css-code, .js-code {
-    display: none;
-  }
-}
-
 /* Handles larger widths */
 @media screen and (min-width: 600px) {
   #main-nav {
@@ -519,14 +528,6 @@ textarea {
 
   #dropdown {
     display: none;
-  }
-
-  .js-code {
-    left: 15%;
-  }
-
-  .css-code {
-    right: 30%;
   }
 
   #greeting {
@@ -561,14 +562,6 @@ textarea {
   .welcome-code {
     font-size: 1em;
   }
-  .js-code {
-    top: 10em;
-  }
-
-  .css-code {
-    bottom: 7%;
-
-  }
 }
 
 @media screen and (min-width: 900px) {
@@ -592,38 +585,53 @@ textarea {
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
+  .node-code {
+    left: 10%;
+  }
   .react-code {
     display: block;
   }
-
-  .css-code {
-    left: 13%;
-    bottom: 5%;
-  }
 }
 
-@media screen and (min-width: 1356px) {
-  .react-code {
-    right: 25%;
-  }
-}
-
-@media screen and (min-width: 1538px) {
-  .js-code {
-    left: 25%;
-  }
-
+@media screen and (min-width: 1111px) {
   .html-code {
     display: block;
   }
+}
 
+@media screen and (min-width: 1400px) {
   .css-code {
-    bottom: 33%;
-    left: 8%;
+    display: block;
+  }
+  .filler-code-top {
+    display: block;
+  }
+  .filler-code-bottom {
+    display: block;
+  }
+}
+
+/* All code in welcome section should remain basically where they are */
+@media screen and (min-width: 1650px) {
+  .js-code {
+    left: 25em;
+  }
+
+  .html-code {
+    left: 85em;
+  }
+
+  .react-code {
+    left: 80em;
   }
 
   .node-code {
-    display: block;
+    left: 20%;
+    bottom: 8%;
+  }
+
+  .css-code {
+    left: 15em;
   }
 }
