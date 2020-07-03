@@ -52,6 +52,6 @@ a:active {
 /* Small screens */
 @media screen and (min-width: 769px) {
   body {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 }
