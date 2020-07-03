@@ -1,4 +1,8 @@
 /* DROP DOWN MENU */
+// Menu button text content
+const closedIcon = '>';
+const openIcon = 'v';
+
 function toggleDropMenu() {
   // Toggles state of display between none and block
   const dropContent = document.getElementById('dropdown-content');
@@ -6,7 +10,7 @@ function toggleDropMenu() {
   const dropButton = document.getElementById('drop-btn');
 
   dropContent.style.display = dropState == 'block' ? 'none' : 'block';
-  dropButton.textContent = dropButton.textContent == '>' ? 'v' : '>';
+  dropButton.textContent = dropButton.textContent == closedIcon ? openIcon : closedIcon;
 }
 
 /* FORM VALIDATION */
