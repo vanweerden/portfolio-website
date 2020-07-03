@@ -58,7 +58,7 @@
         echo "<div class='message'>", $response, "</div>";
         ?>
         <div class='link-container'>
-          <a href='https://vanweerden.me'>Click here to back to the main page</a>
+          <a href='https://vanweerden.me'>Click here to go back to the main page</a>
         </div>
       </div>
     </div>

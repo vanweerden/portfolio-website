@@ -10,6 +10,19 @@ body {
   font-size: 3em;
 }
 
+a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--primary-color-light);
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--text-light);
+}
+
 .main {
   height: 100%;
   background-color: var(--background-dark);
