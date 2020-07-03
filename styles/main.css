@@ -39,9 +39,9 @@ h2:after {
   border: 2px solid white;
   border-radius: 0;
   color: white;
-  font-size: 1em;
   height: 50px;
   width: 150px;
+  font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
 }
 
 .button:hover {
@@ -280,6 +280,20 @@ header {
   color: var(--white);
 }
 
+#projects-blurb {
+  margin: 0 auto;
+  max-width: 35em;
+  margin-bottom: 1.5em;
+}
+
+#projects-blurb a {
+  color: var(--primary-color-light);
+}
+
+#projects a:hover {
+  text-decoration: underline;
+}
+
 /* Container div for project tiles */
 #project-grid {
   align-items: center;
@@ -290,10 +304,6 @@ header {
   margin: 0 auto;
   max-width: 75vw;
   width: 100%;
-}
-
-#projects a:hover {
-  text-decoration: underline;
 }
 
 .project-tile {
