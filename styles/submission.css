@@ -40,3 +40,18 @@ a:active {
 .message {
   margin-bottom: 1em;
 }
+
+/* Break Points */
+/* Tablets */
+@media screen and (min-width: 481px) {
+  body {
+    font-size: 2em;
+  }
+}
+
+/* Small screens */
+@media screen and (min-width: 769px) {
+  body {
+    font-size: 1em;
+  }
+}
