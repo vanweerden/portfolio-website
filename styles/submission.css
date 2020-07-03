@@ -41,16 +41,9 @@ a:active {
 }
 
 /* Break Points */
-/* Tablets */
 @media screen and (min-width: 481px) {
   body {
     font-size: 1.5em;
   }
 }
-
-/* Small screens */
-@media screen and (min-width: 769px) {
-  body {
-    font-size: 2em;
-  }
 }
