@@ -280,13 +280,13 @@ header {
   color: var(--white);
 }
 
-#projects-blurb {
+#projects p {
   margin: 0 auto;
   max-width: 35em;
   margin-bottom: 1.5em;
 }
 
-#projects-blurb a {
+#projects p a {
   color: var(--primary-color-light);
 }
 
