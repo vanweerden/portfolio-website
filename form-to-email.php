@@ -21,8 +21,8 @@
           return $data;
         }
 
-        // Prevents header injection attacks
         function safe($field) {
+          // Prevents header injection attacks
           return ( str_ireplace( array( '\r', '\n', "%0a", "%0d", "Content-Type:", "bcc:", "to:", "cc:" ), "", $field ) );
         }
 
@@ -48,7 +48,7 @@
 
         $success = mail($to, $subject, $email_body, $headers);
 
-        // mail() returns true, display success message (then redirect?)
+        // mail() returns true, display success message
         if ($success == true) {
           $response = "Thank you for your message! I will respond as soon as possible.";
         } else {
